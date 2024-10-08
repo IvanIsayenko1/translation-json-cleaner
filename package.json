@@ -1,0 +1,41 @@
+{
+  "name": "translation-json-cleaner",
+  "version": "1.1.0",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "translation-cleaner": "./index.js"
+  },
+  "keywords": [
+    "translation",
+    "json",
+    "cleaner",
+    "cli",
+    "tool",
+    "i18n",
+    "localization",
+    "unused keys",
+    "empty objects",
+    "nested keys",
+    "file cleanup",
+    "npm",
+    "javascript",
+    "nodejs",
+    "command-line",
+    "development",
+    "internationalization"
+  ],
+  "author": "IvanIsayenko",
+  "license": "ISC",
+  "description": "A CLI tool to find and remove unused translation keys",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.0",
+    "inquirer": "^9.3.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanIsayenko1/ts-object-manager.git"
+  }
+}
