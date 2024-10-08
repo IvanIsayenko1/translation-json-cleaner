@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "translation-cleaner": "./index.js"
+    "translation-json-cleaner": "./index.js"
   },
   "keywords": [
     "translation",
