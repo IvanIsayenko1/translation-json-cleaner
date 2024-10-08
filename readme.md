@@ -11,8 +11,14 @@ After installing the package, you can run the tool from the command line. Below 
 If you haven't already installed the package, you can do so using npm:
 
 ```bash
-npm install -D translation-json-cleaner
+npm install -g translation-json-cleaner
 ```
+or use it with npm scripts:
+``` bash
+npx translation-json-cleaner
+```
+
+
 
 ### Step 2: Prepare Your Files
 Assume you have the following project structure:
@@ -44,6 +50,10 @@ Navigate to your project directory and run the translation JSON cleaner:
 
 ```bash
 translation-json-cleaner
+```
+or use it with npm scripts:
+``` bash
+npx translation-json-cleaner
 ```
 
 ### Step 4: Provide the Required Inputs
@@ -105,7 +115,7 @@ npm install -g translation-json-cleaner
 ### As a Dependency
 To add it to your project, use:
 ```bash
-npm install translation-json-cleaner -D
+npm install translation-json-cleaner -g
 ```
 ### Usage
 After installation, you can run the tool from the command line:
