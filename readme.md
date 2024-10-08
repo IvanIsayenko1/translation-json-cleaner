@@ -2,6 +2,88 @@
 
 A command-line tool for cleaning up translation JSON files by removing unused keys and empty objects. This tool helps to keep your translation files organized and efficient by ensuring that only the necessary keys are present.
 
+## Usage Example
+
+After installing the package, you can run the tool from the command line. Below is a step-by-step example of how to use the translation JSON cleaner.
+
+### Step 1: Install the Package
+
+If you haven't already installed the package, you can do so using npm:
+
+```bash
+npm install -D translation-json-cleaner
+```
+
+### Step 2: Prepare Your Files
+Assume you have the following project structure:
+
+```
+my-project/
+├── src/
+│   ├── index.js
+│   └── components/
+│       ├── Button.js
+│       └── Header.js
+├── translations/
+│   └── en.json
+└── package.json
+```
+Your translations/en.json file might look like this:
+```json
+{
+  "greeting": "Hello",
+  "farewell": "Goodbye",
+  "nested": {
+    "welcome": "Welcome to our application!",
+    "thankYou": "Thank you for using our app!"
+  }
+}
+```
+### Step 3: Run the Cleaner
+Navigate to your project directory and run the translation JSON cleaner:
+
+```bash
+translation-json-cleaner
+```
+
+### Step 4: Provide the Required Inputs
+The tool will prompt you for the following information:
+1. Translation File Path: Enter the path to your JSON translation file. For example:
+```
+./translations/en.json
+```
+2. Project Path: Enter the root path of your project where the keys will be checked. For example:
+```
+./
+```
+3. File Extensions: Enter a comma-separated list of file extensions to scan for translation keys. For example:
+```
+js,ts,jsx
+```
+
+### Step 5: Review the Results
+The tool will scan your project files for keys used in your source code and compare them to the keys in your translation JSON file. It will list any unused keys found and ask whether you want to remove them.
+
+### Step 6: Confirm Removal
+If there are unused keys, you will see a prompt like this:
+```
+Unused keys found:
+- farewell
+
+Do you want to remove the unused keys and any empty objects? (yes/no)
+```
+Type yes to confirm removal. The unused keys will be deleted, and any empty objects will also be removed from your translation file.
+After running the tool, your translations/en.json file might look like this:
+```json
+{
+  "greeting": "Hello",
+  "nested": {
+    "welcome": "Welcome to our application!",
+    "thankYou": "Thank you for using our app!"
+  }
+}
+```
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -57,7 +139,7 @@ The tool will:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Contributing
 
